@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><title>Finex · прототип</title>
+<script>
+  // глубокая ссылка → короткая; любой другой несуществующий адрес → каталог сборки
+  (function () {
+    var deep = location.pathname.match(/^(.*\/)billing\/(?:deposit|withdrawal)(?:\/[^\/]*)*$/);
+    var dir = deep ? deep[1] : location.pathname.replace(/[^\/]*$/, '');
+    location.replace(dir + location.search + location.hash);
+  })();
+</script></head><body></body></html>

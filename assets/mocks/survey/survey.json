@@ -1,0 +1,12 @@
+{
+  "status": {
+    "userId": 0,
+    "verificationData": "string",
+    "currentPageNumber": 13,
+    "createdAt": "string",
+    "updatedAt": "string",
+    "accountType": "stand",
+    "isSkipped": true,
+    "extraData": {}
+  }
+}

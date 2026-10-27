@@ -1,0 +1,1556 @@
+{
+  "parts": [
+    {
+      "id": 10,
+      "title": "Personal details"
+    },
+    {
+      "id": 11,
+      "title": "Trading experience"
+    },
+    {
+      "id": 12,
+      "title": "Finish"
+    }
+  ],
+  "screens": [
+    {
+      "id": 10,
+      "part": 10,
+      "title": "Personal details",
+      "groups": [
+        {
+          "id": 26,
+          "title": "",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible":false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "agreement",
+              "type": "checkbox",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to accept the agreement"
+                }
+              ],
+              "options": null,
+              "label": "I declare that I have read, understood and accepted the following:",
+              "htmlBefore": "",
+              "htmlAfter": " \u003ca href=\"#statement\"\u003eProduct Disclosure Statement\u003c/a\u003e\u003cbr\u003e \u003ca href=\"#terms\"\u003eTerms and Conditions\u003c/a\u003e\u003cbr\u003e \u003ca href=\"#finguide\"\u003eFinancial Services Guide\u003c/a\u003e\u003cbr\u003e \u003ca href=\"#privacy\"\u003ePrivacy Policy\u003c/a\u003e",
+              "answer": "true",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 27,
+          "title": "Name and age",
+          "hint": "",
+          "isRequired": true,
+          "typeToSave": true,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "name",
+              "type": "text",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "The name field is required"
+                },
+                {
+                  "rule": "regex:[a-zA-Z][a-zA-Z' -]*",
+                  "message": "The name contains invalid characters"
+                },
+                {
+                  "rule": "maxlength:255",
+                  "message": "The length of name field must be less than 255"
+                }
+              ],
+              "options": null,
+              "label": "Full name",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "Test Reg",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "birth_date",
+              "type": "date",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "The birth date field is required"
+                },
+                {
+                  "rule": "date",
+                  "message": "The birth date field must be a valid format date"
+                },
+                {
+                  "rule": "age:18",
+                  "message": "You must be 18 years old"
+                }
+              ],
+              "options": null,
+              "label": "Date of birth (18+)",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "2002-12-03",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 28,
+          "title": "Gender",
+          "hint": "",
+          "isRequired": true,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "gender",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to choose gender"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "male",
+                      "label": "Male",
+                      "score": 0
+                    },
+                    {
+                      "value": "female",
+                      "label": "Female",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "female",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 29,
+          "title": "Are you a U.S. citizen?",
+          "hint": "HINT: Are you a U.S. citizen?",
+          "isRequired": true,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "us_tax_resident",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to choose US tax residence type"
+                },
+                {
+                  "rule": "forbidden:yes",
+                  "message": ""
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "yes",
+                      "label": "Yes",
+                      "score": 0
+                    },
+                    {
+                      "value": "no",
+                      "label": "No",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "no",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "\u003cstrong\u003eAttention!\u003c/strong\u003e\u003cbr\u003eFor regulatory reasons, we cannot provide services to U.S. tax residents.",
+                  "showCondition": [
+                    {
+                      "groupId": 29,
+                      "field": "us_tax_resident",
+                      "value": "yes"
+                    }
+                  ]
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 30,
+          "title": "Are you a politically exposed person?",
+          "hint": "A politically exposed person (PEP) is an individual who holds a prominent public position or role in a government body or international organisation, either in Australia or overseas, as well as their immediate family members and/or close associates. The ASIC policy prohibits us from providing services to PEPs",
+          "isRequired": true,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "political_exposed_person",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to choose variant"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "yes",
+                      "label": "Yes",
+                      "score": 0
+                    },
+                    {
+                      "value": "no",
+                      "label": "No",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "yes",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "part": 10,
+      "title": "Contact Details",
+      "groups": [
+        {
+          "id": 31,
+          "title": "Current address",
+          "hint": "",
+          "isRequired": true,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "ca_country",
+              "type": "text",
+              "rules": null,
+              "options": null,
+              "label": "Country",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "",
+              "defaultAnswer": "Australia",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": true,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "ca_search",
+              "type": "address",
+              "rules": null,
+              "options": null,
+              "label": "Search address",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "DSG Bowls Shop, Worrell Street, Nunawading VIC, Australia",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "ca_street",
+              "type": "text",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide street and house number"
+                }
+              ],
+              "options": null,
+              "label": "Street and house number",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "25 Worrell Street",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "ca_index",
+              "type": "text",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide postal code"
+                }
+              ],
+              "options": null,
+              "label": "Postal code",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "3131",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "ca_city",
+              "type": "text",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide city"
+                }
+              ],
+              "options": null,
+              "label": "City/Town",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "Nunawading",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "pa_same",
+              "type": "checkbox",
+              "rules": null,
+              "options": null,
+              "label": "Postal address matches the one specified above",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "true",
+              "defaultAnswer": "true",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 32,
+          "title": "Mailing address",
+          "hint": "",
+          "isRequired": true,
+          "typeToSave": false,
+          "isNested": true,
+          "questions": [
+            {
+              "name": "pa_country",
+              "type": "text",
+              "rules": null,
+              "options": null,
+              "label": "Country",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "",
+              "defaultAnswer": "Australia",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": true,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "pa_street",
+              "type": "text",
+              "rules": null,
+              "options": null,
+              "label": "Street and house number",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "pa_index",
+              "type": "text",
+              "rules": null,
+              "options": null,
+              "label": "Postal code",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            },
+            {
+              "name": "pa_city",
+              "type": "text",
+              "rules": null,
+              "options": null,
+              "label": "City/Town",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": [
+            {
+              "groupId": 31,
+              "field": "pa_same",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "title": "Contacts",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "phone",
+              "type": "phone",
+              "rules": [
+                {
+                  "rule": "phone",
+                  "message": "The phone number must be a valid format"
+                }
+              ],
+              "options": null,
+              "label": "Phone number",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "+66 99 999 9999",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "+?\\d{10,15}",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "part": 10,
+      "title": "Additional Information",
+      "groups": [
+        {
+          "id": 34,
+          "title": "Occupation",
+          "hint": "",
+          "isRequired": true,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "occupation",
+              "type": "select",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide occupation"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "accountancy",
+                      "label": "Accountancy, banking and finance",
+                      "score": 0
+                    },
+                    {
+                      "value": "business",
+                      "label": "Business, consulting and management",
+                      "score": 0
+                    },
+                    {
+                      "value": "charity",
+                      "label": "Charity and voluntary work",
+                      "score": 0
+                    },
+                    {
+                      "value": "creative",
+                      "label": "Creative arts and design",
+                      "score": 0
+                    },
+                    {
+                      "value": "energy",
+                      "label": "Energy and utilities",
+                      "score": 0
+                    },
+                    {
+                      "value": "engineering",
+                      "label": "Engineering and manufacturing",
+                      "score": 0
+                    },
+                    {
+                      "value": "environment",
+                      "label": "Environment and agriculture",
+                      "score": 0
+                    },
+                    {
+                      "value": "healthcare",
+                      "label": "Healthcare",
+                      "score": 0
+                    },
+                    {
+                      "value": "hospitality",
+                      "label": "Hospitality and events management",
+                      "score": 0
+                    },
+                    {
+                      "value": "it",
+                      "label": "Information technology",
+                      "score": 0
+                    },
+                    {
+                      "value": "law",
+                      "label": "Law",
+                      "score": 0
+                    },
+                    {
+                      "value": "security",
+                      "label": "Law enforcement and security",
+                      "score": 0
+                    },
+                    {
+                      "value": "sport",
+                      "label": "Leisure, sport and tourism",
+                      "score": 0
+                    },
+                    {
+                      "value": "marketing",
+                      "label": "Marketing, advertising and PR",
+                      "score": 0
+                    },
+                    {
+                      "value": "media",
+                      "label": "Media and internet",
+                      "score": 0
+                    },
+                    {
+                      "value": "construction",
+                      "label": "Property and construction",
+                      "score": 0
+                    },
+                    {
+                      "value": "administration",
+                      "label": "Public services and administration",
+                      "score": 0
+                    },
+                    {
+                      "value": "hr",
+                      "label": "Recruitment and HR",
+                      "score": 0
+                    },
+                    {
+                      "value": "retail",
+                      "label": "Retail",
+                      "score": 0
+                    },
+                    {
+                      "value": "sales",
+                      "label": "Sales",
+                      "score": 0
+                    },
+                    {
+                      "value": "science",
+                      "label": "Science and pharmaceuticals",
+                      "score": 0
+                    },
+                    {
+                      "value": "social",
+                      "label": "Social care",
+                      "score": 0
+                    },
+                    {
+                      "value": "education",
+                      "label": "Teacher training and education",
+                      "score": 0
+                    },
+                    {
+                      "value": "logistics",
+                      "label": "Transport and logistics",
+                      "score": 0
+                    },
+                    {
+                      "value": "other",
+                      "label": "Other",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "Choose your occupation",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "energy",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 35,
+          "title": "Verification documents",
+          "hint": "HINT: Verification documents",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "documents",
+              "type": "file_with_select",
+              "rules": null,
+              "options": [
+                {
+                  "id": "primary",
+                  "label": "Primary ID",
+                  "options": [
+                    {
+                      "value": "passport",
+                      "label": "Passport",
+                      "score": 0
+                    },
+                    {
+                      "value": "gov_issued_photo",
+                      "label": "Government Issued Photo ID",
+                      "score": 0
+                    },
+                    {
+                      "value": "driver_license",
+                      "label": "Driver’s Licence",
+                      "score": 0
+                    }
+                  ]
+                },
+                {
+                  "id": "secondary",
+                  "label": "Secondary ID",
+                  "options": [
+                    {
+                      "value": "driver_license",
+                      "label": "Driver’s License",
+                      "score": 0
+                    },
+                    {
+                      "value": "bank_statement",
+                      "label": "Bank statement from where you intend to send funds from/receive withdrawals to",
+                      "score": 0
+                    },
+                    {
+                      "value": "utility_bill",
+                      "label": "Utility bill",
+                      "score": 0
+                    },
+                    {
+                      "value": "tax_assessment",
+                      "label": "Tax assessment",
+                      "score": 0
+                    },
+                    {
+                      "value": "mortgage_statement",
+                      "label": "Mortgage statement",
+                      "score": 0
+                    },
+                    {
+                      "value": "tenancy_agreement",
+                      "label": "Tenancy agreement",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "Select document type",
+              "htmlBefore": "To verify your account, we need at least 2 documents that prove your identity and address.",
+              "htmlAfter": "",
+              "answer": "",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        },
+        {
+          "id": 36,
+          "title": "What documents are needed?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": true,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "document_requirements",
+              "type": "html",
+              "rules": null,
+              "options": null,
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "<p>To verify your profile, we need at least 2 documents that prove your identity and address: Primary ID (<strong>passport, government issued photo ID or driver’s licence</strong>) and Secondary ID (<strong>driver’s licence, bank statement, utility bill, tax assessment, mortgage statement or tenancy agreement</strong>).</p></br><p>The uploaded bank statement, utility bill, tax assessment, mortgage statement or tenancy agreement must be issued within the last 3 months under your full name.</p>",
+              "answer": "",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": true,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 37,
+          "title": "What type of order allows you to limit your loss on a trade?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q1",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "STOP LOSS",
+                      "score": 1
+                    },
+                    {
+                      "value": "b",
+                      "label": "TAKE PROFIT",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "b",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 38,
+          "title": "Which statement best describes a “short” position?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q2",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "An order to sell at the current market price, and hoping to profit if the market falls.",
+                      "score": 1
+                    },
+                    {
+                      "value": "b",
+                      "label": "An order type that liquidates all of your positions on your account at a certain time.",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "b",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 39,
+          "title": "Which position has the greatest potential risk?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q3",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "long AUDUSD for 0.01 lots (1 micro lot worth 1,000 units)",
+                      "score": 0
+                    },
+                    {
+                      "value": "b",
+                      "label": "long EURUSD for 10 lots (10 standard lots worth 1,000,000 units)",
+                      "score": 1
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "a",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 40,
+          "title": "Which of the following statements best describes “high volatility”?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q4",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "When prices fluctuate in a wide range within a short period of time.",
+                      "score": 1
+                    },
+                    {
+                      "value": "b",
+                      "label": "When prices fall consecutively over 5 days.",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "b",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 41,
+          "title": "Which of the following factors are essential to reduce the risk of trading leveraged products?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q5",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "Keeping up to date with global news events which impact financial markets.",
+                      "score": 0
+                    },
+                    {
+                      "value": "b",
+                      "label": "Monitoring open positions.",
+                      "score": 0
+                    },
+                    {
+                      "value": "c",
+                      "label": "Ensuring you have enough money in your account to meet margin requirements in addition to a healthy buffer.",
+                      "score": 0
+                    },
+                    {
+                      "value": "d",
+                      "label": "All of the above",
+                      "score": 1
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "d",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 42,
+          "title": "The ‘Bid’ price is the best available “Sell” price. The ‘Ask’ price is the best available (select best answer)",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q6",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "buy price",
+                      "score": 1
+                    },
+                    {
+                      "value": "b",
+                      "label": "margin percentage",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "b",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 43,
+          "title": "The use of leverage allows traders to magnify their gains as well as their losses. All things equal – trading with leverage is _____ (select best answer)",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q7",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "safer than trading without leverage.",
+                      "score": 0
+                    },
+                    {
+                      "value": "b",
+                      "label": "riskier than trading without leverage.",
+                      "score": 1
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "b",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 44,
+          "title": "Do you understand that it is your responsibility to monitor your account and use appropriate risk management tools such as stop losses to reduce any potential loss you may incur?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q8",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "Yes",
+                      "score": 1
+                    },
+                    {
+                      "value": "b",
+                      "label": "No",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "a",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 45,
+          "title": "Which of the following is a trailing stop order?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q9",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "An order that moves as the price progresses in the direction that you are trading. If the trade moves back towards the order, the order will stay stationary until hit.",
+                      "score": 1
+                    },
+                    {
+                      "value": "b",
+                      "label": "An order that sits below the current market price and when it opens a new position with the intention of benefitting from an upward price movement.",
+                      "score": 0
+                    },
+                    {
+                      "value": "c",
+                      "label": "An order that sits above the current market price and when it opens a new position with the intention of benefitting from a downward price movement.",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "c",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "part": 11,
+      "title": "Trading Experience Quiz",
+      "groups": [
+        {
+          "id": 46,
+          "title": "Which risk/reward ratio is considered safer?",
+          "hint": "",
+          "isRequired": false,
+          "isCollapsible": false,
+          "typeToSave": false,
+          "isNested": false,
+          "questions": [
+            {
+              "name": "q10",
+              "type": "radio",
+              "rules": [
+                {
+                  "rule": "required",
+                  "message": "You have to provide answer"
+                }
+              ],
+              "options": [
+                {
+                  "id": "",
+                  "label": "",
+                  "options": [
+                    {
+                      "value": "a",
+                      "label": "If the risk is $200 and the reward is $400, then the risk-reward ratio is 200:400 or 1:2.",
+                      "score": 0
+                    },
+                    {
+                      "value": "b",
+                      "label": "If the risk is $500 and the reward is $1,500, then the risk-reward ratio is 500:1500 or 1:3.",
+                      "score": 1
+                    },
+                    {
+                      "value": "c",
+                      "label": "If the risk is $1,000 and the reward is $500, then the risk-reward ratio is 1000:500 or 2:1.",
+                      "score": 0
+                    }
+                  ]
+                }
+              ],
+              "label": "",
+              "htmlBefore": "",
+              "htmlAfter": "",
+              "answer": "c",
+              "defaultAnswer": "",
+              "meta": {
+                "format": "",
+                "placeholder": "",
+                "isReadonly": false,
+                "hint": {
+                  "html": "",
+                  "showCondition": null
+                },
+                "showCondition": null
+              }
+            }
+          ],
+          "showCondition": null
+        }
+      ]
+    }
+  ],
+  "state": {
+    "partId": 12,
+    "screenId": 38
+  }
+}
