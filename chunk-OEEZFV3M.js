@@ -78,7 +78,7 @@ crypto-js/mode-ctr-gladman.js:
   (** @preserve
    * Counter block mode compatible with  Dr Brian Gladman fileenc.c
    * derived from CryptoJS.mode.CTR
-   * Jan Hruby jhruby.web@gmail.com
+   * Jan Hruby
    *)
 
 @angular/common/fesm2022/location.mjs:
